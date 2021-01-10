@@ -7,8 +7,8 @@ function rotateAroundWorldAxis(object, axis, radians) {
 	rotWorldMatrix = new THREE.Matrix4();
 	rotWorldMatrix.makeRotationAxis(axis.normalize(), radians);
 	rotWorldMatrix.multiply(object.matrix);
-	tobject.matrix = rotWorldMatrix;
-	tobject.rotation.setFromRotationMatrix(object.matrix);
+	object.matrix = rotWorldMatrix;
+	object.rotation.setFromRotationMatrix(object.matrix);
 }
 
 function convertUnityAngle(unityAngle){

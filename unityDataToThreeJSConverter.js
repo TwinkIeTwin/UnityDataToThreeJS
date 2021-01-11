@@ -23,6 +23,10 @@ function convertUnityRotation(rotationEuler){
 	return new THREE.Vector3(convertedX, convertedY, convertedZ);
 }
 
+function convertUnityRotationAxis(rotationAxis){
+	return new THREE.Vector3(-rotationAxis.x, -rotationAxis.y, rotationAxis.z);
+}
+
 function setLightDirection(directionLight, rotationEuler){
 	directionLight.position.x = Math.cos(rotationEuler.x);
 	directionLight.position.y = Math.cos(rotationEuler.y);
